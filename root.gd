@@ -9,6 +9,7 @@ var n = 0
 func create_square(n):
 	var square = square_scene.instance()
 	square.set_name('square_' + str(n))
+	square.position = Vector2(rand_range(-300, 100), 0)
 	add_child(square)
 	print('Square number ' + str(n))
 		
