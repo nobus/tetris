@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://square.gd" type="Script" id=1]
 [ext_resource path="res://textures/red_square.png" type="Texture" id=2]
 [ext_resource path="res://RigidBody2DSquare.gd" type="Script" id=3]
+[ext_resource path="res://CollisionShape2D.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 49.964, 50.1918 )
@@ -15,6 +16,21 @@ position = Vector2( 758.549, 50 )
 texture = ExtResource( 2 )
 script = ExtResource( 1 )
 
+[node name="Timer" type="Label" parent="square"]
+margin_left = -44.0
+margin_top = -21.0
+margin_right = 45.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "TEST"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 758.549, 48.4133 )
+position = Vector2( 758.549, 49.4133 )
 shape = SubResource( 1 )
+script = ExtResource( 4 )
